@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gira-discos Lerico Wood - La Redoute</title>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Cleaned up unused CSS links (fullscreen.css / temp_vinyl.css) -->
+</head>
+
+<body>
+    <header class="lr-header">
+        <div class="lr-shell">
+            <div class="lr-header-grid">
+                <div class="lr-logo-mark">
+                    <a href="index.html">
+                        <img src="images/logo/laredoute.png" alt="La Redoute" class="lr-logo-img">
+                    </a>
+                </div>
+                <nav class="lr-main-nav">
+                    <a href="#" class="active">Casa</a>
+                    <a href="#">Moda</a>
+                </nav>
+                <div class="lr-search">
+                    <i class="bi bi-search" aria-hidden="true"></i>
+                    <input type="text" placeholder="O que procura?" />
+                </div>
+                <div class="lr-actions">
+                    <span class="lr-rplus">R+</span>
+                    <div class="lr-user">
+                        <i class="bi bi-person" aria-hidden="true"></i>
+                        <a href="#">Entrar / Registar</a>
+                    </div>
+                    <button class="lr-icon-btn" aria-label="Favoritos">
+                        <i class="bi bi-heart" aria-hidden="true"></i>
+                    </button>
+                    <button class="lr-icon-btn lr-cart" aria-label="Carrinho">
+                        <i class="bi bi-bag" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="lr-menu-links">
+                    <button class="lr-menu" type="button">
+                        <span class="lr-burger"><span></span><span></span><span></span></span>
+                        Menu
+                    </button>
+                    <div class="lr-secondary-links">
+                        <a href="#">Natal</a>
+                        <a href="#">Promoções</a>
+                        <a href="#">Têxtil-lar</a>
+                        <a href="#">Top Vendas</a>
+                    </div>
+                </div>
+                <a class="lr-profissionais" href="#">Profissionais</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="lr-breadcrumbs">
+        <div class="lr-shell">
+            <a href="index.html">Home</a> / <a href="#">Casa</a> / <a href="#">Vinil &
+                gira-discos</a> / <span>Lerico
+                Wood</span>
+        </div>
+    </div>
+
+    <main class="lr-product-page">
+        <div class="lr-shell">
+            <div class="lr-product-detail">
+                <div class="lr-product-gallery">
+                    <!-- Navigation Arrows -->
+                    <button class="lr-carousel-arrow lr-carousel-prev" id="prevBtn" aria-label="Imagem Anterior">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+
+                    <img src="images/Exemplo7.png" alt="Gira-discos Lerico Wood" id="productImage">
+
+                    <button class="lr-carousel-arrow lr-carousel-next" id="nextBtn" aria-label="Imagem Seguinte">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+
+                    <!-- Existing Buttons -->
+                    <button class="lr-view-3d-btn" aria-label="Ver em 3D">
+                        <i class="bi bi-eye"></i>
+                    </button>
+                    <button class="lr-expand-btn" aria-label="Expandir imagem">
+                        <i class="bi bi-arrows-fullscreen"></i>
+                    </button>
+
+                    <!-- Bullets -->
+                    <div id="pdpCarouselBulletContainer" class="bulletWidget-container" role="tablist"
+                        aria-label="Slides">
+                        <button class="bulletWidget-item active" role="tab" aria-selected="true" data-number="0"><span
+                                class="bulletWidget-item-circle"></span></button>
+                        <button class="bulletWidget-item" role="tab" aria-selected="false" data-number="1"><span
+                                class="bulletWidget-item-circle"></span></button>
+                        <button class="bulletWidget-item" role="tab" aria-selected="false" data-number="2"><span
+                                class="bulletWidget-item-circle"></span></button>
+                        <button class="bulletWidget-item" role="tab" aria-selected="false" data-number="3"><span
+                                class="bulletWidget-item-circle"></span></button>
+                        <button class="bulletWidget-item" role="tab" aria-selected="false" data-number="4"><span
+                                class="bulletWidget-item-circle"></span></button>
+                        <button class="bulletWidget-item" role="tab" aria-selected="false" data-number="5"><span
+                                class="bulletWidget-item-circle"></span></button>
+                        <button class="bulletWidget-item" role="tab" aria-selected="false" data-number="6"><span
+                                class="bulletWidget-item-circle"></span></button>
+                    </div>
+                </div>
+                <div class="lr-product-info">
+                    <h1 class="lr-product-title">Gira-discos Lerico Wood</h1>
+                    <div class="lr-product-ref">Ref: 350240451</div>
+
+                    <div class="lr-product-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="count">(12 avaliações)</span>
+                    </div>
+
+                    <div class="lr-product-price-large">
+                        <span class="current">159,00 €</span>
+                        <span class="old">229,00 €</span>
+                        <span class="discount">-30%</span>
+                    </div>
+
+                    <div class="lr-product-description">
+                        <p>Gira-discos com base em madeira leve, tampa acrílica e braço
+                            ajustável. Ideal para quem
+                            procura um som quente e um design vintage moderno. Perfeito para a
+                            sua sala de estar.</p>
+                        <ul>
+                            <li>Velocidades: 33/45/78 RPM</li>
+                            <li>Saída RCA e Bluetooth</li>
+                            <li>Acabamento em madeira natural</li>
+                        </ul>
+                    </div>
+
+                    <div class="lr-product-actions">
+                        <button class="lr-add-to-cart-btn">Juntar ao Carrinho</button>
+                        <button class="lr-icon-btn" aria-label="Adicionar aos favoritos">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+
+                    <div class="lr-delivery-info">
+                        <i class="bi bi-truck"></i> Entrega grátis a partir de 50€
+                    </div>
+                </div>
+            </div>
+
+            <div class="lr-similar-products">
+                <h2>Artigos Semelhantes</h2>
+                <div class="lr-products-grid">
+                    <article class="lr-product-card">
+                        <span class="lr-tag">Promo</span>
+                        <img src="images/gira-discos1.jpg" alt="Gira-discos Classic Phono">
+                        <div class="lr-card-body">
+                            <h4>Classic Phono</h4>
+                            <p>Tampa em couro sintético, visual vintage e som quente.</p>
+                            <p class="lr-price">a partir de <strong>129 EUR</strong> <span class="lr-old">189 EUR</span>
+                                <span class="lr-off">-32%</span>
+                            </p>
+                            <div class="lr-rating">★ 4,8</div>
+                        </div>
+                    </article>
+                    <article class="lr-product-card">
+                        <span class="lr-tag">Promo</span>
+                        <img src="images/gira-discos2.jpg" alt="Gira-discos Lerico modelo 2">
+                        <div class="lr-card-body">
+                            <h4>Lerico Clear</h4>
+                            <p>Tampa transparente, traço minimalista e base estável.</p>
+                            <p class="lr-price">a partir de <strong>139 EUR</strong> <span class="lr-old">199 EUR</span>
+                                <span class="lr-off">-30%</span>
+                            </p>
+                            <div class="lr-rating">★ 4,5</div>
+                        </div>
+                    </article>
+                    <article class="lr-product-card">
+                        <span class="lr-tag">Promo</span>
+                        <img src="images/gira-discos4.jpg" alt="Gira-discos Lerico modelo 4">
+                        <div class="lr-card-body">
+                            <h4>Lerico Teal</h4>
+                            <p>Acabamento teal, tampa levadiça e prato anti-vibração.</p>
+                            <p class="lr-price">a partir de <strong>139 EUR</strong> <span class="lr-old">199 EUR</span>
+                                <span class="lr-off">-30%</span>
+                            </p>
+                            <div class="lr-rating">★ 4,5</div>
+                        </div>
+                    </article>
+                    <article class="lr-product-card">
+                        <span class="lr-tag">Promo</span>
+                        <img src="images/gira-discos5.jpg" alt="Gira-discos Lerico modelo 5">
+                        <div class="lr-card-body">
+                            <h4>Lerico Slate</h4>
+                            <p>Prato estável, tampa acrílica e acabamento cinza escuro.</p>
+                            <p class="lr-price">a partir de <strong>149 EUR</strong> <span class="lr-old">209 EUR</span>
+                                <span class="lr-off">-29%</span>
+                            </p>
+                            <div class="lr-rating">★ 4,4</div>
+                        </div>
+                    </article>
+                    <article class="lr-product-card">
+                        <span class="lr-tag">Promo</span>
+                        <img src="images/gira-discos6.jpg" alt="Gira-discos modelo 6">
+                        <div class="lr-card-body">
+                            <h4>Lerico Graph</h4>
+                            <p>Design grafite, tampa acrílica e prato anti-ressonância.</p>
+                            <p class="lr-price">a partir de <strong>169 EUR</strong> <span class="lr-old">229 EUR</span>
+                                <span class="lr-off">-26%</span>
+                            </p>
+                            <div class="lr-rating">★ 4,5</div>
+                        </div>
+                    </article>
+                    <article class="lr-product-card">
+                        <span class="lr-tag">Promo</span>
+                        <img src="images/gira-discos7.jpg" alt="Gira-discos modelo 7">
+                        <div class="lr-card-body">
+                            <h4>Lerico Coral</h4>
+                            <p>Acabamento coral, tampa levadiça e braço calibrado.</p>
+                            <p class="lr-price">a partir de <strong>159 EUR</strong> <span class="lr-old">219 EUR</span>
+                                <span class="lr-off">-27%</span>
+                            </p>
+                            <div class="lr-rating">★ 4,6</div>
+                        </div>
+                    </article>
+                </div>
+                <div class="lr-products-nav">
+                    <div class="lr-scrollbar">
+                        <div class="lr-scrollbar-track">
+                            <div class="lr-scrollbar-thumb"></div>
+                        </div>
+                    </div>
+                    <div class="lr-nav-btns">
+                        <button class="lr-nav-btn lr-nav-prev" type="button" aria-label="Anterior">&lsaquo;</button>
+                        <button class="lr-nav-btn lr-nav-next" type="button" aria-label="Seguinte">&rsaquo;</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lr-product-long-description">
+                <h2>Descrição do artigo</h2>
+                <div class="lr-desc-content">
+                    <div class="lr-desc-text">
+                        <h3>Gira-discos, da Lenco castanho LENCO</h3>
+                        <p class="ref">Ref 3923830</p>
+                        <p>O gira-discos Lenco LS-50 apresenta um design simplista, moderno e
+                            muito elegante com duas colunas inseridas nos suportes do
+                            equipamento para que possa ouvir a música que quer, quando quer.</p>
+                        <p>Esqueça sistemas de música complicados e aproveite o seu maravilhoso
+                            vinil com um simples toque de um botão.</p>
+                        <p>Seja qual for o estilo de música que gosta de ouvir, pode facilmente
+                            alterar as RPM entre os 33, 45 e 78, deseja ouvir o seu disco ainda
+                            com maior volume? Só tem que conectar o gira-discos às suas colunas.
+                            Quer poupar o seu disco e ouvir a sua gravação a partir do laptop ou
+                            telemóvel? Só tem que ligar o dispositivo no USB e copie as musicas
+                            do disco para digital em poucos segundos.</p>
+                        <p>O Gira-discos Lenco LS-50 vai dar vida aos seus discos sem qualquer
+                            dificuldade, fornecido com tampa removível em acrílico, protege
+                            contra poeira e sujidade.</p>
+
+                        <h4>Caraterísticas do gira-discos, da Lenco:</h4>
+                        <ul>
+                            <li>Número de saídas RCA – 2</li>
+                            <li>Cartucho de cerâmica com braço mecânico</li>
+                            <li>2 colunas incorporadas (2x1w)</li>
+                            <li>Cabo USB e adaptador 45rpm</li>
+                            <li>Inclui (pré) amplificador e equalizador predefinido</li>
+                            <li>Consumo de energia em stand-by (Diretiva ErP): 0.5W</li>
+                            <li>3 velocidades RPM: 33, 45 e 78</li>
+                            <li>Cartucho de cerâmica com braço mecânico</li>
+                            <li>RCA output, USB</li>
+                            <li>Colunas incorporadas nos pés (2x1W)</li>
+                            <li>Material: plástico, madeira</li>
+                        </ul>
+
+                        <h4>Medidas:</h4>
+                        <ul>
+                            <li>Comprimento: 31,6 cm</li>
+                            <li>Largura: 11,8 cm</li>
+                            <li>Altura: 41,2 cm</li>
+                            <li>Peso: 4 kg</li>
+                        </ul>
+                    </div>
+                    <div class="lr-desc-image">
+                        <img src="images/desc-image.png" alt="Gira-discos Lenco em detalhe">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="lr-footer">
+        <div class="lr-footer-top">
+            <div class="lr-footer-feature">
+                <i class="bi bi-truck"></i>
+                <span>ENTREGA</span>
+            </div>
+            <div class="lr-footer-feature">
+                <i class="bi bi-arrow-left-right"></i>
+                <span>Trocas &amp; Devoluções</span>
+            </div>
+            <div class="lr-footer-feature">
+                <i class="bi bi-credit-card-2-front"></i>
+                <span>PAGAMENTO SEGURO</span>
+            </div>
+            <div class="lr-footer-feature">
+                <i class="bi bi-headset"></i>
+                <span>APOIO AO CLIENTE</span>
+            </div>
+        </div>
+
+        <div class="lr-footer-bottom">
+            <div>
+                <h4>LA REDOUTE</h4>
+                <a href="#">Quem somos</a>
+                <a href="#">Contactos</a>
+                <a href="#">Sustentabilidade e responsabilidade social</a>
+            </div>
+            <div>
+                <h4>SERVIÇOS</h4>
+                <a href="#">Ajuda</a>
+                <a href="#">Trocas e Devoluções</a>
+                <a href="#">Remover inscrição de Newsletter</a>
+                <a href="#">Montagem de mobiliário</a>
+                <a href="#">Compra e Poupa</a>
+            </div>
+            <div>
+                <h4>MARCAS EXCLUSIVAS</h4>
+                <a href="#">La Redoute Collections</a>
+                <a href="#">La Redoute Intérieurs</a>
+                <a href="#">AM.PM</a>
+            </div>
+            <div>
+                <h4>UNIVERSO LA REDOUTE</h4>
+                <a href="#">Inspiração</a>
+                <a href="#">Vídeos</a>
+                <a href="#">Profissionais</a>
+                <a href="#">APP La Redoute</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="imageModal" class="lr-modal">
+        <button class="lr-modal-close" aria-label="Fechar">&times;</button>
+        <div class="lr-modal-layout">
+            <div class="lr-modal-thumbnails">
+                <!-- Javascript will populate this -->
+            </div>
+            <div class="lr-modal-main-view">
+                <img class="lr-modal-content" id="expandedImg">
+
+                <div class="lr-zoom-controls">
+                    <button class="lr-zoom-btn" id="zoomOut" aria-label="Diminuir zoom"><i
+                            class="bi bi-dash"></i></button>
+                    <button class="lr-zoom-btn" id="zoomIn" aria-label="Aumentar zoom"><i
+                            class="bi bi-plus"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/custom-scroll.js"></script>
+    <script>
+        // Modal Logic
+        const modal = document.getElementById("imageModal");
+        const img = document.getElementById("productImage");
+        const modalImg = document.getElementById("expandedImg");
+        const expandBtn = document.querySelector(".lr-expand-btn");
+        const closeBtn = document.querySelector(".lr-modal-close");
+        const zoomInBtn = document.getElementById("zoomIn");
+        const zoomOutBtn = document.getElementById("zoomOut");
+        const thumbnailsContainer = document.querySelector(".lr-modal-thumbnails");
+
+        let currentZoom = 1;
+
+        // Open Modal Function
+        function openModal() {
+            modal.style.display = "flex";
+            modal.classList.add("active");
+            // Set initial image
+            if (!modalImg.src || modalImg.src !== img.src) {
+                modalImg.src = img.src;
+            }
+            currentZoom = 1;
+            updateZoom();
+            renderModalThumbnails();
+        }
+
+        expandBtn.onclick = function (e) {
+            e.stopPropagation();
+            openModal();
+        }
+
+        // Add click event to main image
+        img.style.cursor = "pointer";
+        img.onclick = function () {
+            openModal();
+        }
+
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+            modal.classList.remove("active");
+        }
+
+        modal.onclick = function (e) {
+            if (e.target === modal || e.target.closest('.lr-modal-main-view') === e.target || e.target.classList.contains('lr-modal-layout')) {
+                if (e.target !== modalImg && !e.target.closest('.lr-zoom-controls')) {
+                    modal.style.display = "none";
+                    modal.classList.remove("active");
+                }
+            }
+        }
+
+        function updateZoom() {
+            modalImg.style.transform = `scale(${currentZoom})`;
+        }
+
+        zoomInBtn.onclick = function (e) {
+            e.stopPropagation();
+            if (currentZoom < 1.8) {
+                currentZoom += 0.2;
+                updateZoom();
+            }
+        }
+
+        zoomOutBtn.onclick = function (e) {
+            e.stopPropagation();
+            if (currentZoom > 0.4) {
+                currentZoom -= 0.2;
+                updateZoom();
+            }
+        }
+
+        // Carousel Logic
+        const carouselImages = [
+            "images/Exemplo7.png",
+            "images/Exemplo1.png",
+            "images/Exemplo2.png",
+            "images/Exemplo3.png",
+            "images/Exemplo4.png",
+            "images/Exemplo5.png",
+            "images/Exemplo6.png"
+        ];
+        let currentIndex = 0;
+        const mainImage = document.getElementById("productImage");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        const bullets = document.querySelectorAll(".bulletWidget-item");
+
+        function updateCarousel() {
+            mainImage.src = carouselImages[currentIndex];
+            bullets.forEach((bullet, index) => {
+                const circle = bullet.querySelector('.bulletWidget-item-circle');
+                if (index === currentIndex) {
+                    bullet.classList.add("active");
+                    bullet.setAttribute("aria-selected", "true");
+                } else {
+                    bullet.classList.remove("active");
+                    bullet.setAttribute("aria-selected", "false");
+                }
+            });
+            // Also update modal image if open
+            if (modal.style.display === "flex") {
+                modalImg.src = carouselImages[currentIndex];
+                renderModalThumbnails(); // Update active state
+            }
+        }
+
+        function renderModalThumbnails() {
+            thumbnailsContainer.innerHTML = "";
+            carouselImages.forEach((src, index) => {
+                const thumb = document.createElement("img");
+                thumb.src = src;
+                thumb.className = "lr-modal-thumb";
+                if (index === currentIndex) thumb.classList.add("active");
+
+                thumb.onclick = (e) => {
+                    e.stopPropagation();
+                    currentIndex = index;
+                    updateCarousel(); // Updates main image and modal image
+                };
+
+                thumbnailsContainer.appendChild(thumb);
+            });
+        }
+
+        prevBtn.onclick = function () {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : carouselImages.length - 1;
+            updateCarousel();
+        };
+
+        nextBtn.onclick = function () {
+            currentIndex = (currentIndex < carouselImages.length - 1) ? currentIndex + 1 : 0;
+            updateCarousel();
+        };
+
+        bullets.forEach((bullet) => {
+            bullet.onclick = function () {
+                currentIndex = parseInt(this.getAttribute("data-number"));
+                updateCarousel();
+            };
+        });
+    </script>
+    <!-- 3D Overlay -->
+    <div id="vinyl-overlay" class="lr-overlay-3d">
+        <div class="lr-overlay-content">
+            <button id="close-overlay" class="lr-close-overlay" aria-label="Fechar 3D">&times;</button>
+            <canvas id="three-canvas"></canvas>
+
+            <!-- Controls (copied/adapted from typical 3D viewer implementation if needed, 
+                 but main.js seems to expect specific IDs like 'base-dropdown', 'vinyl-dropdown', 'music-button') 
+                 I'll add placeholders for these if they are expected by main.js to avoid errors, 
+                 or better yet, add specific controls if I know what they are. 
+                 Looking at main.js: 
+                 - #base-dropdown a[data-texture]
+                 - #vinyl-dropdown a[data-vinyl]
+                 - #music-button
+                 - #volume-slider
+            -->
+            <div class="controls-container">
+                <!-- Dropdown Base -->
+                <div class="dropdown-container">
+                    <button id="texture-button" class="glass-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                            <path fill-rule="evenodd"
+                                d="M20.599 1.5c-.376 0-.743.111-1.055.32l-5.08 3.385a18.747 18.747 0 0 0-3.471 2.987 10.04 10.04 0 1 1 4.815 4.815 18.748 18.748 0 0 0 2.988-3.472l3.385-5.079A1.902 1.902 0 0 0 20.599 1.5Zm-8.3 14.025a18.76 18.76 0 0 0 1.896-1.207 8.026 8.026 0 0 0-4.513-4.513c-.35.595-.792 1.258-1.207 1.896a6.721 6.721 0 0 1-.317.478 6.742 6.742 0 0 1 .478.317Zm-2.776 3.397a8.165 8.165 0 0 0 1.972-1.972l-1.05-1.05a5.16 5.16 0 0 0-.256-.237c-.36-.317-.993-.84-1.724-1.408a6.012 6.012 0 0 1-1.05 1.724c-.568.73-.896 1.169-1.408 1.724-.077.082-.156.168-.237.256l1.05 1.05Zm2.953-4.269a6.722 6.722 0 0 1 1.724-1.05c.73-.568 1.169-.896 1.724-1.408.082-.077.168-.156.256-.237l1.05 1.05a8.166 8.166 0 0 0-1.972 1.972l-1.05-1.05a5.137 5.137 0 0 0-.237-.256 6.643 6.643 0 0 1-1.495-1.724Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span>Personalizar Base</span>
+                    </button>
+
+                    <div class="dropdown-content" id="base-dropdown">
+
+                        <a href="#" data-texture="wood-light">Madeira Clara</a>
+                        <a href="#" data-texture="marble">Mármore Branco</a>
+                        <a href="#" data-texture="original">Original</a>
+                    </div>
+                </div>
+
+                <!-- Dropdown Vinil -->
+                <div class="dropdown-container">
+                    <button id="vinyl-button" class="glass-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                            <path
+                                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm0 8.625a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25ZM12 4.5a7.5 7.5 0 0 0-7.5 7.5c0 .736.103 1.448.294 2.126.06.213.256.368.477.378h.005a7.466 7.466 0 0 1 3.515-1.509.75.75 0 0 1 .458 1.428A8.966 8.966 0 0 0 6.6 15.658a7.5 7.5 0 1 0 5.4-11.158Z" />
+                        </svg>
+                        <span>Personalizar Vinil</span>
+                    </button>
+
+                    <div class="dropdown-content" id="vinyl-dropdown">
+                        <a href="#" data-vinyl="original">Preto (Original)</a>
+                        <a href="#" data-vinyl="blue">Azul</a>
+                        <a href="#" data-vinyl="green">Verde</a>
+                        <a href="#" data-vinyl="yellow">Amarelo</a>
+                    </div>
+                </div>
+
+                <!-- Simplified Music Controls (Volume Only) -->
+                <div id="music-controls" class="glass-button"
+                    style="padding: 0 20px; overflow: hidden; display: flex; align-items: center; height: 44px;">
+                    <i class="bi bi-volume-up" style="color: white; margin-right: 12px; font-size: 1.2rem;"></i>
+                    <div class="volume-container-inner"
+                        style="background: transparent; border: none; display: flex; align-items: center;">
+                        <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.3"
+                            style="width: 80px; height: 4px; accent-color: white; cursor: pointer;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        // Import main.js to initialize the scene
+        // We only want to 'activate' or 'show' it when clicked, 
+        // but main.js runs partly on load. 
+        // Ideally we'd refactor main.js to export an init function, 
+        // but to minimize changes to main.js (as per "do it" simple request), 
+        // we will just load it. The canvas is in the overlay, so it acts as "hidden" until overlay shows.
+        import './js/three-scripts/main.js';
+
+        // Handle Open/Close Overlay
+        const overlay3D = document.getElementById('vinyl-overlay');
+        const openBtn = document.querySelector('.lr-view-3d-btn');
+        const closeBtn = document.getElementById('close-overlay');
+
+        if (openBtn) {
+            openBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                overlay3D.classList.add('active');
+            });
+        }
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                overlay3D.classList.remove('active');
+            });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
