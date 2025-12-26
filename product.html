@@ -602,6 +602,8 @@
             closeBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 overlay3D.classList.remove('active');
+                // Dispatch event so main.js knows to stop music
+                window.dispatchEvent(new CustomEvent('vinyl-overlay-closed'));
             });
         }
     </script>

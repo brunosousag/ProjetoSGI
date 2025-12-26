@@ -464,9 +464,26 @@ window.addEventListener('mousemove', (event) => {
   }
 });
 
+
+const mouseDown = new THREE.Vector2();
+
+window.addEventListener('mousedown', (event) => {
+  mouseDown.x = event.clientX;
+  mouseDown.y = event.clientY;
+});
+
 window.addEventListener('click', interacaoLeitor)
 
 function interacaoLeitor(event) {
+  // Check distance moved
+  const dist = Math.sqrt(
+    Math.pow(event.clientX - mouseDown.x, 2) +
+    Math.pow(event.clientY - mouseDown.y, 2)
+  );
+
+  // If moved more than 5 pixels, consider it a drag/orbit and ignore click
+  if (dist > 5) return; // Drag threshold
+
   mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
   mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
 
@@ -629,3 +646,11 @@ function clipToCircle(image) {
 
   return new THREE.CanvasTexture(canvas);
 }
+
+// Listen for overlay close event from product.html
+window.addEventListener('vinyl-overlay-closed', () => {
+  if (currentAudio && isPlaying) {
+    currentAudio.pause();
+    isPlaying = false;
+  }
+});
