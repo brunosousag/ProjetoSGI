@@ -890,11 +890,18 @@ a {
   transform: translateX(-50%);
   z-index: 25;
   display: flex;
-  gap: 15px;
+  flex-wrap: wrap;
+  /* Allow wrapping */
+  justify-content: center;
+  /* Center buttons */
+  gap: 12px;
   background: rgba(0, 0, 0, 0.4);
-  padding: 10px 20px;
-  border-radius: 40px;
+  padding: 8px 12px;
+  border-radius: 30px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  width: max-content;
+  max-width: 92vw;
+  box-sizing: border-box;
 }
 
 .glass-button {
@@ -906,8 +913,14 @@ a {
   cursor: pointer;
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  padding: 0 20px;
+  /* Use flex alignment for height */
+  height: 44px;
+  /* Fixed height for consistency */
   transition: all 0.3s;
+  white-space: nowrap;
+  /* Prevent text wrapping */
+  flex-shrink: 0;
 }
 
 .glass-button:hover {
@@ -981,6 +994,7 @@ a {
   justify-content: center;
   pointer-events: auto;
   background: #fff;
+  overflow: hidden;
 }
 
 /* Updates to existing modal classes */
@@ -1243,4 +1257,167 @@ a {
 
 .lr-no-smooth {
   scroll-behavior: auto !important;
+}
+
+/* Consolidated Help Modal Styles */
+.help-modal {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  /* Close to the edge but with breathing room */
+  transform: translateY(-50%);
+  background: rgba(15, 15, 15, 0.85);
+  /* Slightly darker for readability */
+  backdrop-filter: blur(12px);
+  padding: 24px;
+  border-radius: 20px;
+  color: #fff;
+  z-index: 100;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  width: 280px;
+  pointer-events: auto;
+  text-align: left;
+}
+
+.help-modal.active {
+  display: block;
+  animation: fadeInLeft 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate(-20px, -50%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
+}
+
+.help-content h3 {
+  margin: 0 0 16px;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+.help-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.help-content li {
+  margin-bottom: 14px;
+  display: flex;
+  align-items: flex-start;
+  /* Align top for multi-line text */
+  gap: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.help-content li i,
+.help-content li svg {
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 4px;
+  width: 24px;
+  text-align: center;
+}
+
+/* 2-Line Layout Styles */
+.help-content li div {
+  display: flex;
+  flex-direction: column;
+}
+
+.help-content li strong {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.help-content li span {
+  font-size: 13px;
+  opacity: 0.7;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.help-content button {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.help-content button:hover {
+  background: #fff;
+  color: #000;
+}
+
+@media (max-width: 600px) {
+  .help-modal {
+    top: auto;
+    bottom: 100px;
+    left: 16px;
+    right: 16px;
+    width: auto;
+    max-height: 60vh;
+    /* Prevent cut-off on small screens */
+    overflow-y: auto;
+    /* Allow scroll if content is too tall */
+    transform: none;
+    padding: 20px;
+  }
+
+  .help-modal.active {
+    animation: fadeInUp 0.3s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Landscape Mode Adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .help-modal {
+    top: 50%;
+    bottom: auto;
+    left: 20px;
+    right: auto;
+    transform: translateY(-50%);
+    width: 280px;
+    max-height: 85vh;
+  }
+
+  .help-modal.active {
+    animation: fadeInLeft 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
 }
