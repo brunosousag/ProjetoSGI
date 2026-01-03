@@ -143,6 +143,9 @@ new GLTFLoader().load(
   new URL('../../models/RecordPlayer.gltf', import.meta.url).href,
   (gltf) => {
     const model = gltf.scene;
+    // Rodar o modelo para ficar de frente para a câmara (ajuste de -90 graus)
+    // Se estava virado para trás com PI/2, vamos rodar para o outro lado
+    model.rotation.y = -Math.PI / 2;
     cena.add(gltf.scene);
 
     let DustCoverOpenClose = THREE.AnimationClip.findByName(gltf.animations, "DustCoverOpenClose")
@@ -215,7 +218,8 @@ new GLTFLoader().load(
     // Offset model upwards to avoid being covered by bottom controls
     model.position.y += maxDim * 0.15;
 
-    camera.position.set(0, 0, maxDim * 1.5);
+    // VISTA DE CIMA (45-60 graus) para ver o vinil "de frente"
+    camera.position.set(0, maxDim * 0.8, maxDim * 1.2);
     camera.lookAt(0, 0, 0);
     controls.target.set(0, 0, 0);
     controls.update();
