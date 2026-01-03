@@ -140,7 +140,7 @@ function setupMusicControl() {
 
 
 new GLTFLoader().load(
-  '../models/RecordPlayer.gltf',
+  new URL('../../models/RecordPlayer.gltf', import.meta.url).href,
   (gltf) => {
     const model = gltf.scene;
     cena.add(gltf.scene);
